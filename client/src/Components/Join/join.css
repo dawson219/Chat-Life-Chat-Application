@@ -1,0 +1,50 @@
+.joinOuterContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    background-image: url("https://media.istockphoto.com/photos/staying-connected-in-this-digital-age-picture-id1187582529?k=20&m=1187582529&s=612x612&w=0&h=aSymVClguv1CUcV3rtmERC4mt2KdVuuS4vRCfUIbDgo=");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.joinInnerContainer {
+    width: 20%;
+}
+.joinInput {
+    border-radius: 10px;
+    outline: none;
+    padding: 15px 20px;
+    width: 100%;
+}
+.heading {
+    color: gray;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+}
+.button {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #2979FF;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    border: none;
+    width: 100%;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .joinOuterContainer {
+        height: 100%;
+    }
+    .joinInnerContainer {
+        width: 90%;
+    }
+}
+button:focus {
+    outline: 0;
+}

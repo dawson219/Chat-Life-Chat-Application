@@ -1,0 +1,58 @@
+.form {
+    display: flex;
+    border-top: 2px solid #D3D3D3;
+  }
+  
+.sendButton {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #A25B5B;
+    padding: 20px;
+    display: inline-block;
+    border: none;
+    width: 10%;
+    overflow: hidden;
+  }
+  
+.editorWrapper{
+    z-index: 999;
+    width: 90%;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    /* overflow: hidden; */
+    bottom: 0;
+    padding-left: 10%;
+    background-color: #fff;
+}
+.ql-editor{
+    overflow-y: scroll;
+    background-color: #fff;
+}
+.ql-toolbar{
+    background-color: #fff;
+}
+.ql-mention-list{
+    padding: 0;
+    margin: 0;
+}
+.ql-mention-list-item{
+    padding: 5%;
+    margin: 5%;
+    list-style: none;
+    background-color: white;
+    border-radius: 5px;
+}
+.ql-mention-list-item:hover{
+    background-color: bisque;
+    cursor: pointer;
+}
+.ql-mention-list-container{
+    background-color: whitesmoke;
+    width: 10%;
+    overflow: hidden;
+}
+.ql-emoji-textarea{
+    z-index: 999;
+}
