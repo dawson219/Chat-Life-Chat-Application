@@ -16,8 +16,17 @@ const server = http.createServer(app);
 const io = socketio(server , {
     cors: {
         origin: "*",
-        methods: ["GET", "POST"]
+        methods: ["GET", "POST"],
+        handlePreflightRequest: (req, res) => {
+            res.writeHead(200, {
+                "Access-Control-Allow-Headers": "Content-Type, Authorization",
+                "Access-Control-Allow-Origin": req.headers.origin, //or the specific origin you want to give access to,
+                "Access-Control-Allow-Credentials": true
+            });
+            res.end();
+        }
     }
+
 });
 
 io.on('connection' , (socket)=>{
