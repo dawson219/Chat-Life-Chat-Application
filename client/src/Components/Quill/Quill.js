@@ -14,11 +14,10 @@ export default function Quill({message , setMessage , sendMessage , users}) {
   for(let i = 0;  i < users.length ; i++){
     arr.push({text:`${users[i].name}` , value:`${users[i].name }`})
   }
-
-  const [content, setContent] = useState("");
   const handleClick = (e)=>{
-    setMessage(content);
+    console.log(message)
     sendMessage(message);
+    setMessage(message)
   }
   const modules = {
     toolbar: [
@@ -53,10 +52,14 @@ export default function Quill({message , setMessage , sendMessage , users}) {
   return (
     <>
     <div className="form">
-        <div className="editorWrapper">
-            <ReactQuill modules={modules} theme="snow" onChange={setContent} placeholder="Content goes here..." />
+        <div className="tempWrapper">
+          <div className="editorWrapper">
+              <ReactQuill modules={modules} theme="snow" onChange={setMessage} placeholder="Content goes here..." />
+          </div>
         </div>
-        <button  className="sendButton" onClick={(e) => handleClick(e)}>Send</button>
+        <div className="buttonWrapper">
+          <button  className="sendButton" onClick={(e) => handleClick(e)}>Send</button>
+        </div>
     </div>
     </>
   )

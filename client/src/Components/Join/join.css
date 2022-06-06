@@ -4,9 +4,7 @@
     text-align: center;
     height: 100vh;
     align-items: center;
-    background-image: url("https://media.istockphoto.com/photos/staying-connected-in-this-digital-age-picture-id1187582529?k=20&m=1187582529&s=612x612&w=0&h=aSymVClguv1CUcV3rtmERC4mt2KdVuuS4vRCfUIbDgo=");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: transparent;
 }
 .joinInnerContainer {
     width: 20%;
@@ -18,7 +16,7 @@
     width: 100%;
 }
 .heading {
-    color: gray;
+    color: black;
     font-size: 2.5em;
     padding-bottom: 10px;
     border-bottom: 2px solid white;

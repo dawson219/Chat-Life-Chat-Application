@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     max-height: 100%;
     background-image:  url("https://img.freepik.com/free-photo/top-view-arrangement-natural-material-stationery_23-2148898233.jpg?w=2000");
     background-repeat: no-repeat;
@@ -13,12 +13,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background: rgb(241,128,23);
-    background: linear-gradient(0deg, rgba(241,128,23,1) 0%, rgba(206,148,97,1) 100%); */
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 8px;
-    height: 100%;
+    max-height: 100vh;
     width: 60%;
+    min-height: 100vh;
   }
   
   @media (min-width: 320px) and (max-width: 480px) {

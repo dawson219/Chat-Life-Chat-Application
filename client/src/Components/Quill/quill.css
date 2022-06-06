@@ -1,8 +1,20 @@
-.form {
+.tempWrapper {
     display: flex;
     border-top: 2px solid #D3D3D3;
-  }
-  
+    width: 100%;
+}
+.form{
+    display: flex;
+}
+.buttonWrapper{
+    width: 10%;
+
+    background-color: white;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+}
 .sendButton {
     color: #fff !important;
     text-transform: uppercase;
@@ -11,19 +23,18 @@
     padding: 20px;
     display: inline-block;
     border: none;
-    width: 10%;
+    width: 100%;
     overflow: hidden;
   }
   
 .editorWrapper{
     z-index: 999;
-    width: 90%;
+    width: 100%;
     font-size: 1em;
     font-family: 'Roboto', sans-serif;
     height: auto;
     /* overflow: hidden; */
     bottom: 0;
-    padding-left: 10%;
     background-color: #fff;
 }
 .ql-editor{
@@ -56,3 +67,30 @@
 .ql-emoji-textarea{
     z-index: 999;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .editorWrapper{
+        z-index: 999;
+        width: 100%;
+        font-size: 1em;
+        font-family: 'Roboto', sans-serif;
+        height: auto;
+        /* overflow: hidden; */
+        bottom: 0;
+        background-color: #fff;
+    }
+    .buttonWrapper{
+        width: 20%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+  }
+  
+  @media (min-width: 480px) and (max-width: 1200px) {
+    .container {
+      width: 60%;
+    }
+  }

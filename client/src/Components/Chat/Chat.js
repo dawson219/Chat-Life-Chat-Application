@@ -17,7 +17,8 @@ export default function Chat() {
   const [message, setMessage] = useState('')
   const [messages, setMessages] = useState([])
   const [users, setUsers] = useState([])
-  const ENDPOINT = 'https://chat-life-dawson.herokuapp.com/';
+  // const ENDPOINT = 'https://chat-life-dawson.herokuapp.com/';
+  const ENDPOINT = 'localhost:5000';
 
   useEffect(()=>{
     const {name , room} = queryString.parse(location.search)
@@ -27,7 +28,7 @@ export default function Chat() {
     socket.emit('join' , {name , room} , ()=>{
     });
     return ()=>{
-      socket.emit('disconnect');
+      socket.emit('remove');
 
       socket.off();
     }
