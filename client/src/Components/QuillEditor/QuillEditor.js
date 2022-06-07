@@ -7,18 +7,21 @@ import * as Emoji from "react-quill-emoji";
 import "quill-emoji/dist/quill-emoji.css";
 
 import ReactQuill from 'react-quill';
+import {Quill} from 'react-quill'
 import 'react-quill/dist/quill.snow.css';
+import { LinkPreview } from '@dhaiwat10/react-link-preview';
 
-export default function Quill({message , setMessage , sendMessage , users}) {
+export default function QuillEditor({message , setMessage , sendMessage , users}) {
   let arr = [];
   for(let i = 0;  i < users.length ; i++){
     arr.push({text:`${users[i].name}` , value:`${users[i].name }`})
   }
-  const handleClick = (e)=>{
-    console.log(message)
+  const [content, setContent] = useState("");
+  const handleClick = ()=>{
+    setMessage(content);
     sendMessage(message);
-    setMessage(message)
   }
+
   const modules = {
     toolbar: [
         ["bold", "italic", "strike"],
@@ -54,11 +57,11 @@ export default function Quill({message , setMessage , sendMessage , users}) {
     <div className="form">
         <div className="tempWrapper">
           <div className="editorWrapper">
-              <ReactQuill modules={modules} theme="snow" onChange={setMessage} placeholder="Content goes here..." />
+              <ReactQuill modules={modules} theme="snow" onChange={setContent} placeholder="Content goes here..." />
           </div>
         </div>
         <div className="buttonWrapper">
-          <button  className="sendButton" onClick={(e) => handleClick(e)}>Send</button>
+          <button  className="sendButton" onClick={() => handleClick()}>Send</button>
         </div>
     </div>
     </>

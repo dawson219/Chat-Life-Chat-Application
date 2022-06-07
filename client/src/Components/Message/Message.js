@@ -1,5 +1,6 @@
 import React from 'react'
 import './message.css'
+import { LinkPreview } from '@dhaiwat10/react-link-preview';
 
 export default function Message({message:{user , text} , name}) {
     let isSentByCurrentUser = false;
@@ -21,9 +22,11 @@ export default function Message({message:{user , text} , name}) {
     ) : (
         <div className="messageContainer justifyStart">
             <div className="messageBox backGroundLight">
-                <p className="messageText colorDark" dangerouslySetInnerHTML={{ __html:text }}></p>
+            {user === 'admin' 
+            ? <p className="messageText colorDark" style={{marginTop:'5%'}} dangerouslySetInnerHTML={{ __html:text }}></p> 
+            : <p className="messageText colorDark" dangerouslySetInnerHTML={{ __html:text }}></p>}
             </div>
-            <p className="sentText pl-10">{user}</p>
+            <p className="sentText pl-10" >{user}</p>
         </div>
     ) 
   )

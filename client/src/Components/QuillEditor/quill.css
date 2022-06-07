@@ -9,11 +9,11 @@
 .buttonWrapper{
     width: 10%;
 
-    background-color: white;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 .sendButton {
     color: #fff !important;

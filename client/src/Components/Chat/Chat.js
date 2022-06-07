@@ -6,7 +6,7 @@ import io from 'socket.io-client'
 import { useLocation } from 'react-router-dom'
 import InfoBar from '../InfoBar/InfoBar'
 import Messages from '../Messages/Messages'
-import Quill from '../Quill/Quill'
+import QuillEditor from '../QuillEditor/QuillEditor'
 
 let socket;
 
@@ -18,7 +18,8 @@ export default function Chat() {
   const [messages, setMessages] = useState([])
   const [users, setUsers] = useState([])
   // const ENDPOINT = 'https://chat-life-dawson.herokuapp.com/';
-  const ENDPOINT = 'localhost:5000';
+  // const ENDPOINT = 'localhost:5000';
+  const ENDPOINT = 'https://chatroom-application-dawson.herokuapp.com/';
 
   useEffect(()=>{
     const {name , room} = queryString.parse(location.search)
@@ -54,7 +55,7 @@ export default function Chat() {
       <div className="container">
         <InfoBar room = {room}/>
         <Messages messages = {messages} name = {name}/>
-        <Quill users={users} message = {message} setMessage = {setMessage} sendMessage={sendMessage} />
+        <QuillEditor users={users} message = {message} setMessage = {setMessage} sendMessage={sendMessage} />
       </div>
     </div>
   )
