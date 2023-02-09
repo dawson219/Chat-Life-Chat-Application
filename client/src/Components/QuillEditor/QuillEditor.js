@@ -21,16 +21,16 @@ export default function QuillEditor({
   for (let i = 0; i < users.length; i++) {
     arr.push({ text: `${users[i].name}`, value: `${users[i].name}` });
   }
-  const handleClick = (e) => {
-    e.preventDefault()
+  const handleClick = () => {
     sendMessage();
   };
 
   const modules = {
     toolbar: [
-      ["bold", "italic", "strike"],
+      ["bold", "italic", "underline", "strike"],
       ["blockquote", "code-block", "code"],
       [{ list: "ordered" }, { list: "bullet" }],
+      [{ 'script': 'sub'}, { 'script': 'super' }], 
       ["link", "image"],
       ["clean"],
     ],
@@ -60,7 +60,7 @@ export default function QuillEditor({
 
   return (
     <>
-      <form className="form" onSubmit={(e)=>{handleClick(e)}}>
+      <div className="form" >
         <div className="tempWrapper">
           <div className="editorWrapper">
             <ReactQuill
@@ -76,11 +76,11 @@ export default function QuillEditor({
           </div>
         </div>
         <div className="buttonWrapper">
-          <button type="submit" className="sendButton">
+          <button onClick={()=>{handleClick()}} className="sendButton">
             Send
           </button>
         </div>
-      </form>
+      </div>
     </>
   );
 }
