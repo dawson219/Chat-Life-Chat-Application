@@ -17,14 +17,18 @@
 }
 .sendButton {
     color: #fff !important;
-    text-transform: uppercase;
     text-decoration: none;
     background: #A25B5B;
-    padding: 20px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     border: none;
     width: 100%;
     overflow: hidden;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
   }
   
 .editorWrapper{
@@ -89,7 +93,7 @@
     }
   }
   
-  @media (min-width: 480px) and (max-width: 1200px) {
+  @media (min-width: 850px) {
     .container {
       width: 60%;
     }

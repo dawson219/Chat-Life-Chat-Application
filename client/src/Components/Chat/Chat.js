@@ -18,8 +18,8 @@ export default function Chat() {
   const [messages, setMessages] = useState([])
   const [users, setUsers] = useState([])
   // const ENDPOINT = 'https://chat-life-dawson.herokuapp.com/';
-  // const ENDPOINT = 'localhost:5000';
-  const ENDPOINT = 'https://chatroom-application-dawson.herokuapp.com/';
+  const ENDPOINT = 'localhost:5000';
+  // const ENDPOINT = 'https://chatlife.onrender.com';
 
   useEffect(()=>{
     const {name , room} = queryString.parse(location.search)
